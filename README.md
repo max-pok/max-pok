@@ -4,4 +4,4 @@ In Progress...
 
 ## Development server
 
-https://max-pok.web.app/
+https://max-pok.firebaseapp.com/
