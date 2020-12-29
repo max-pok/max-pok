@@ -670,7 +670,7 @@ ul li {
 }
 
 .img-overlay {
-    background-image: url(../assets/images/footer-bg.png);
+    background-image: url(../images/footer-bg.png);
     background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
@@ -687,20 +687,20 @@ ul li {
 }
 
 .home-2-img {
-    background-image: url(../assets/images/home-bg-img.jpg);
+    background-image: url(../images/home-bg-img.jpg);
 }
 
 .featured-img-one {
-    background-image: url(../assets/images/home-bg-img.jpg);
+    background-image: url(../images/home-bg-img.jpg);
 }
 
 .featured-img-two {
-    background-image: url(../assets/images/extra-feature-bg.jpg);
+    background-image: url(../images/extra-feature-bg.jpg);
 }
 
 .map-image {
     /* background-image: url(../images/map-color-overlay.png); */
-    background-image: url(../assets/images/globe-world-map3.png);
+    background-image: url(../images/globe-world-map3.png);
 }
 
 .mt-30 {
@@ -1102,19 +1102,11 @@ h6 {
 }
 
 .dark-vertion {
-    opacity: 1.0;
+    opacity: 0.9;
 }
 
 .dark-vertion.black-bg {
     background-color: #100e17;
-}
-
-.bg-dark {
-    background: transparent !important;
-}
-
-.bg-dark-inverse {
-    background: #212027 !important;
 }
 
 .dark-vertion .section-loader {
@@ -1859,7 +1851,7 @@ h6 {
     top: 0;
     left: 0;
     font-size: 15px;
-    font-weight: normal;
+    font-weight: 600;
     opacity: 0.9;
 }
 
@@ -3391,7 +3383,7 @@ h6 {
 }
 
 .home-ov-img {
-    background-image: url(../assets/images/footer-background-image-1.png);
+    background-image: url(../images/footer-background-image-1.png);
     background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
@@ -3815,7 +3807,7 @@ BLOG Pagination
     position: absolute;
     left: 50%;
     top: 50%;
-    background-image: url(../assets/images/slider/status.gif);
+    background-image: url(../images/slider/status.gif);
     background-repeat: no-repeat;
     background-position: center;
     margin: -100px 0 0 -100px;
