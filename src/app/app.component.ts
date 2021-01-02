@@ -12,6 +12,10 @@ declare const test: any;
 export class AppComponent  {
   title = 'max-pok';
   isScrolled = false;
+  isScrolledHome = false;
+  isScrolledAbout = false;
+  isScrolledSkills = false;
+  isScrolledPortfolio = false;
 
   constructor(private router: Router, private wowService: NgwWowService) {
     this.router.events.pipe(
@@ -28,5 +32,9 @@ export class AppComponent  {
   @HostListener("window:scroll", ['$event'])
   scrollEvent($event: any) {
     this.isScrolled = window.pageYOffset >= 80;
+    this.isScrolledHome = window.pageYOffset >= -5 && window.pageYOffset <= 400;
+    this.isScrolledAbout = window.pageYOffset > 400 && window.pageYOffset <= 1200;
+    this.isScrolledSkills = window.pageYOffset > 1200 && window.pageYOffset <= 3000;
+    this.isScrolledPortfolio = window.pageYOffset > 3000 && window.pageYOffset <= 5000;
   }
 }

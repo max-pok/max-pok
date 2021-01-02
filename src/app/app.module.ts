@@ -10,7 +10,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgwWowModule } from 'ngx-wow';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
-
 @NgModule({
   declarations: [
     AppComponent
