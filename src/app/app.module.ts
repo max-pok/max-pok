@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgwWowModule } from 'ngx-wow';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -20,6 +21,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     BrowserAnimationsModule,
     FontAwesomeModule,
     NgbModule,
+    NgwWowModule,
     NgCircleProgressModule.forRoot({
       "radius": 50,
       "space": -6,

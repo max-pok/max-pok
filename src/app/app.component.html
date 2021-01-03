@@ -38,8 +38,8 @@
                             <li class="nav-item" [ngClass]="{'active': isScrolledPortfolio}">
                                 <a class="nav-link" (click)="scroll(portfolioTarget)">Portfolio</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" (click)="scroll(contactTarget)">Contact</a>
+                            <li class="nav-item" [ngClass]="{'active': isScrolledContactMe}">
+                                <a class=" nav-link " (click)="scroll(contactTarget)">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -53,35 +53,38 @@
           HOME 
       ===================
       -->
-    <section class="mh-home home-ov-img" #homeTarget>
-        <div class="home-ovimg">
-            <div class="container">
-                <div class="row xs-column-reverse section-separator vertical-middle-content home-padding">
-                    <div class="col-sm-6">
-                        <div class="mh-header-info">
-                            <div class="mh-promo wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+    <section class="mh-home home-ov-img " #homeTarget>
+        <div class="home-ovimg ">
+            <div class="container ">
+                <div class="row xs-column-reverse section-separator vertical-middle-content home-padding ">
+                    <div class="col-sm-6 ">
+                        <div class="mh-header-info ">
+                            <div class="mh-promo wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.1s ">
                                 <span>Hello I'm</span>
                             </div>
 
-                            <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Max Pokidaylo</h2>
-                            <h4 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">Software Engineering Student</h4>
+                            <h2 class="wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.2s ">Max Pokidaylo</h2>
+                            <h4 class="wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.3s ">Software Engineering Student</h4>
 
                             <ul>
-                                <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s"><i class="fa fa-envelope"></i><a href="mailto:">maxim.p9@gmail.com</a></li>
-                                <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s"><i class="fa fa-phone"></i><a href="callto:">+972 523 546 002</a></li>
-                                <li class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s"><i class="fa fa-map-marker"></i><address>Israel</address></li>
+                                <li class="wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.4s ">
+                                    <i class="fa fa-envelope"></i>
+                                    <a>maxim.p9@gmail.com</a>
+                                </li>
+                                <li class="wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.5s "><i class="fa fa-phone "></i><a href="callto: ">+972 523 546 002</a></li>
+                                <li class="wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.6s "><i class="fa fa-map-marker "></i><address>Israel</address></li>
                             </ul>
 
-                            <ul class="social-icon wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                                <li><a href="#"><i class="fa fa-github"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <ul class="social-icon wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.7s ">
+                                <li><a href="https://github.com/max-pok"><i class="fa fa-github "></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/max-pok/"><i class="fa fa-linkedin "></i></a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="hero-img wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                            <div class="img-border">
-                                <img src="assets/images/hero.jpeg" alt="" class="img-fluid">
+                    <div class="col-sm-6 ">
+                        <div class="hero-img wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.6s ">
+                            <div class="img-border ">
+                                <img src="assets/images/hero.jpeg " alt=" " class="img-fluid ">
                             </div>
                         </div>
                     </div>
@@ -95,23 +98,23 @@
           ABOUT
       =================
       -->
-    <section class="mh-about" #aboutTarget>
-        <div class="container">
-            <div class="row section-separator">
-                <div class="col-sm-12 col-md-6">
-                    <div class="mh-about-img shadow-2 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                        <img src="assets/images/ab-img.png" alt="" class="img-fluid">
+    <section class="mh-about " #aboutTarget>
+        <div class="container ">
+            <div class="row section-separator ">
+                <div class="col-sm-12 col-md-6 ">
+                    <div class="mh-about-img shadow-2 wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.4s ">
+                        <img src="assets/images/ab-img.png " alt=" " class="img-fluid ">
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12 col-md-6 ">
                     <div class="mh-about-inner">
-                        <h2 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">About Me</h2>
-                        <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Hello, I’m Max, software engineering student (B.Sc., 4th year) with specialization in cyber security at SCE. Creative, determined and passionate for programming, application development and computer science.
+                        <h2 class="wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.1s ">About Me</h2>
+                        <p class="wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.2s ">Hello, I’m Max, software engineering student (B.Sc., 4th year) with specialization in cyber security at SCE. Creative, determined and passionate for programming, application development and computer science.
                         </p>
-                        <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Activaly searching for a student position or an entry-level position as a Software Engineer/Fullstack Developer/Backend Developer/Frontend Developer/Java Developer or any other relevent role that may suit my skills and knowlage.
-                            <p class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Avalible for job opportunities in central and southern Israel.
+                        <p class="wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.2s ">Activaly searching for a student position or an entry-level position as a Software Engineer/Fullstack Developer/Backend Developer/Frontend Developer/Java Developer or any other relevent role that may suit my skills and knowlage.
+                            <p class="wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.2s ">Avalible for job opportunities in central and southern Israel.
                             </p>
-                            <a href="#" class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">Downlaod Resume <i class="fa fa-download"></i></a>
+                            <a href="# " class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.4s ">Downlaod Resume <i class="fa fa-download "></i></a>
                     </div>
                 </div>
             </div>
@@ -123,33 +126,33 @@
          SERVICE
       ===================
       -->
-    <section class="mh-service">
-        <div class="container">
-            <div class="row section-separator">
-                <div class="col-sm-12 text-center section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+    <section class="mh-service ">
+        <div class="container ">
+            <div class="row section-separato ">
+                <div class="col-sm-12 text-center section-title wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.2s ">
                     <h3>What I do</h3>
                 </div>
-                <div class="col-sm-4">
-                    <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                        <i class="fa fa-bullseye purple-color"></i>
+                <div class="col-sm-4 ">
+                    <div class="mh-service-item shadow-1 dark-bg wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.3s ">
+                        <i class="fa fa-bullseye purple-color "></i>
                         <h3>UI Design</h3>
                         <p>
                             ...
                         </p>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                        <i class="fa fa-code iron-color"></i>
+                <div class="col-sm-4 ">
+                    <div class="mh-service-item shadow-1 dark-bg wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.5s ">
+                        <i class="fa fa-code iron-color "></i>
                         <h3>Web Development</h3>
                         <p>
                             ...
                         </p>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="mh-service-item shadow-1 dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                        <i class="fa fa-object-ungroup sky-color"></i>
+                <div class="col-sm-4 ">
+                    <div class="mh-service-item shadow-1 dark-bg wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.7s ">
+                        <i class="fa fa-object-ungroup sky-color "></i>
                         <h3>App Development</h3>
                         <p>
                             ...
@@ -165,80 +168,80 @@
          SKILLS
       ===================
       -->
-    <section class="mh-skills" #skillsTarget>
-        <div class="container">
-            <div class="row section-separator">
-                <div class="section-title text-center col-sm-12">
-                    <!--<h2>Skills</h2>-->
+    <section class="mh-skills " #skillsTarget>
+        <div class="container ">
+            <div class="row section-separator ">
+                <div class="section-title text-center col-sm-12 ">
+                    <h2>Skills & Knowledge</h2>
                 </div>
-                <div class="col-sm-12 col-md-6">
-                    <div class="mh-skills-inner">
-                        <div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                            <h3>Skills & Knowladge</h3>
-                            <div class="each-skills">
-                                <div class="candidatos">
-                                    <div class="parcial">
-                                        <div class="info">
-                                            <div class="nome">Javascript</div>
-                                            <div class="percentagem-num">60%</div>
+                <div class="col-sm-12 col-md-6 ">
+                    <div class="mh-skills-inner ">
+                        <div class="mh-professional-skill wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.3s">
+                            <h3>Skills</h3>
+                            <div class="each-skills ">
+                                <div class="candidatos ">
+                                    <div class="parcial ">
+                                        <div class="info ">
+                                            <div class="nome ">Javascript</div>
+                                            <div class="percentagem-num ">60%</div>
                                         </div>
-                                        <div class="progressBar">
-                                            <div class="percentagem" style="width: 60%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="candidatos">
-                                    <div class="parcial">
-                                        <div class="info">
-                                            <div class="nome">Java</div>
-                                            <div class="percentagem-num">88%</div>
-                                        </div>
-                                        <div class="progressBar">
-                                            <div class="percentagem" style="width: 88%;"></div>
+                                        <div class="progressBar ">
+                                            <div class="percentagem " style="width: 60%; "></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="candidatos">
-                                    <div class="parcial">
-                                        <div class="info">
-                                            <div class="nome">Python</div>
-                                            <div class="percentagem-num">60%</div>
+                                <div class="candidatos ">
+                                    <div class="parcial ">
+                                        <div class="info ">
+                                            <div class="nome ">Java</div>
+                                            <div class="percentagem-num ">88%</div>
                                         </div>
-                                        <div class="progressBar">
-                                            <div class="percentagem" style="width: 60%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="candidatos">
-                                    <div class="parcial">
-                                        <div class="info">
-                                            <div class="nome">C</div>
-                                            <div class="percentagem-num">89%</div>
-                                        </div>
-                                        <div class="progressBar">
-                                            <div class="percentagem" style="width: 89%;"></div>
+                                        <div class="progressBar ">
+                                            <div class="percentagem " style="width: 88%; "></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="candidatos">
-                                    <div class="parcial">
-                                        <div class="info">
-                                            <div class="nome">C++</div>
-                                            <div class="percentagem-num">89%</div>
+                                <div class="candidatos ">
+                                    <div class="parcial ">
+                                        <div class="info ">
+                                            <div class="nome ">Python</div>
+                                            <div class="percentagem-num ">60%</div>
                                         </div>
-                                        <div class="progressBar">
-                                            <div class="percentagem" style="width: 89%;"></div>
+                                        <div class="progressBar ">
+                                            <div class="percentagem " style="width: 60%; "></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="candidatos">
-                                    <div class="parcial">
-                                        <div class="info">
-                                            <div class="nome">Angular</div>
-                                            <div class="percentagem-num">85%</div>
+                                <div class="candidatos ">
+                                    <div class="parcial ">
+                                        <div class="info ">
+                                            <div class="nome ">C</div>
+                                            <div class="percentagem-num ">89%</div>
                                         </div>
-                                        <div class="progressBar">
-                                            <div class="percentagem" style="width: 85%;"></div>
+                                        <div class="progressBar ">
+                                            <div class="percentagem " style="width: 89%; "></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="candidatos ">
+                                    <div class="parcial ">
+                                        <div class="info ">
+                                            <div class="nome ">C++</div>
+                                            <div class="percentagem-num ">89%</div>
+                                        </div>
+                                        <div class="progressBar ">
+                                            <div class="percentagem " style="width: 89%; "></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="candidatos ">
+                                    <div class="parcial ">
+                                        <div class="info ">
+                                            <div class="nome ">Angular</div>
+                                            <div class="percentagem-num ">85%</div>
+                                        </div>
+                                        <div class="progressBar ">
+                                            <div class="percentagem " style="width: 85%; "></div>
                                         </div>
                                     </div>
                                 </div>
@@ -246,30 +249,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6">
-                    <div class="mh-professional-skills wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
+                <div class="col-sm-12 col-md-6 ">
+                    <div class="mh-professional-skills wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.3s">
                         <h3>Professional Skills</h3>
                         <ul class="mh-professional-progress">
                             <li>
-                                <!-- <div class="mh-progress mh-progress-circle">
-                                </div> -->
-                                <circle-progress [percent]="95" style="pointer-events: none;"></circle-progress>
-                                <div class="nome">Communication</div>
+                                <circle-progress [percent]="95" style="pointer-events: none; "></circle-progress>
+                                <div class="nome ">Communication</div>
                             </li>
                             <li>
-                                <!-- <div class="mh-progress mh-progress-circle" data-progress="55"></div> -->
-                                <circle-progress [percent]="85" style="pointer-events: none;"></circle-progress>
-                                <div class="pr-skill-name">Team Work</div>
+                                <circle-progress [percent]="85 " style="pointer-events: none; "></circle-progress>
+                                <div class="pr-skill-name ">Team Work</div>
                             </li>
                             <li>
-                                <!-- <div class="mh-progress mh-progress-circle" data-progress="86"></div> -->
-                                <circle-progress [percent]="60" style="pointer-events: none;"></circle-progress>
-                                <div class="pr-skill-name">Project Management</div>
+                                <circle-progress [percent]="60 " style="pointer-events: none; "></circle-progress>
+                                <div class="pr-skill-name ">Project Management</div>
                             </li>
                             <li>
-                                <!-- <div class="mh-progress mh-progress-circle" data-progress="60"></div> -->
-                                <circle-progress [percent]="95" style="pointer-events: none;"></circle-progress>
-                                <div class="pr-skill-name">Creativity</div>
+                                <circle-progress [percent]="95 " style="pointer-events: none; "></circle-progress>
+                                <div class="pr-skill-name ">Creativity</div>
                             </li>
                         </ul>
                     </div>
@@ -283,45 +281,45 @@
          EDUCATION & COMPLETED PROJECTS
       ===================
       -->
-    <section class="mh-experince">
-        <div class="bolor-overlay">
-            <div class="container">
-                <div class="row section-separator">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="mh-education">
-                            <h3 class="wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Education</h3>
-                            <div class="mh-education-deatils">
+    <section class="mh-experince ">
+        <div class="bolor-overlay ">
+            <div class="container ">
+                <div class="row section-separator ">
+                    <div class="col-sm-12 col-md-6 ">
+                        <div class="mh-education ">
+                            <h3 class="wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.2s ">Education</h3>
+                            <div class="mh-education-deatils ">
                                 <!-- Education Institutes-->
-                                <div class="mh-education-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                                <div class="mh-education-item dark-bg wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.3s ">
                                     <h4>B.Sc Software Engineering Student (4th year) From<a>Sami Shamoon College of Engineering</a></h4>
-                                    <div class="mh-eduyear">2017 - 2021</div>
-                                    <div class="mh-eduyear"><span>Major: </span>Cyber Security</div>
-                                    <div class="mh-eduyear"><span>GPA: </span>86</div>
-                                    <div class="mh-eduyear"><span>Expected Graduation: </span>August 2021</div>
+                                    <div class="mh-eduyear ">2017 - 2021</div>
+                                    <div class="mh-eduyear "><span>Major: </span>Cyber Security</div>
+                                    <div class="mh-eduyear "><span>GPA: </span>86</div>
+                                    <div class="mh-eduyear "><span>Expected Graduation: </span>August 2021</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6">
-                        <div class="mh-work">
+                    <div class="col-sm-12 col-md-6 ">
+                        <div class="mh-work ">
                             <h3>Projects</h3>
-                            <div class="mh-experience-deatils">
+                            <div class="mh-experience-deatils ">
                                 <!-- Project-->
-                                <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                                    <h4><a href="#">E-DKOM</a> Attack</h4>
-                                    <p class="wow flash" data-wow-iteration="500" data-wow-duration="5s" data-wow-delay="2s">In Progress...</p>
-                                    <ul class="work-responsibility">
-                                        <li><i class="fa fa-circle"></i>Final Project</li>
-                                        <li><i class="fa fa-circle"></i>Linux Kernal Module</li>
+                                <div class="mh-work-item dark-bg wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.4s ">
+                                    <h4><a>E-DKOM</a> Attack</h4>
+                                    <p class="wow flash " data-wow-iteration="500 " data-wow-duration="5s " data-wow-delay="2s ">In Progress...</p>
+                                    <ul class="work-responsibility ">
+                                        <li><i class="fa fa-circle "></i>Final Project</li>
+                                        <li><i class="fa fa-circle "></i>Linux Kernal Module</li>
                                     </ul>
                                 </div>
                                 <!-- Project-->
-                                <div class="mh-work-item dark-bg wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s">
-                                    <h4><a href="#">SafeZone</a> Android application </h4>
+                                <div class="mh-work-item dark-bg wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.4s ">
+                                    <h4><a href="https://github.com/max-pok/Shelter">SafeZone</a> Android Application </h4>
                                     <p>Safe zone (shelter) android application for Beer-Sheva residents.</p>
-                                    <ul class="work-responsibility">
-                                        <li><i class="fa fa-circle"></i>Project in 'Project Management' Course</li>
-                                        <li><i class="fa fa-circle"></i>Written in Java</li>
+                                    <ul class="work-responsibility ">
+                                        <li><i class="fa fa-circle "></i>Project in 'Project Management' Course</li>
+                                        <li><i class="fa fa-circle "></i>Written in Java</li>
                                     </ul>
                                 </div>
                             </div>
@@ -337,104 +335,104 @@
          PORTFOLIO
       ===================
       -->
-    <section class="mh-portfolio" #portfolioTarget>
-        <div class="container">
-            <div class="row section-separator">
-                <div class="section-title col-sm-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+    <section class="mh-portfolio " #portfolioTarget>
+        <div class="container ">
+            <div class="row section-separator ">
+                <div class="section-title col-sm-12 wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.1s ">
                     <h3>Recent Portfolio</h3>
                 </div>
-                <div class="part col-sm-12">
-                    <div class="mh-project-gallery col-sm-12 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                        <div class="portfolioContainer row">
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
+                <div class="part col-sm-12 ">
+                    <div class="mh-project-gallery col-sm-12 wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.5s ">
+                        <div class="portfolioContainer row ">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface ">
                                 <figure>
-                                    <img src="assets/images/portfolio/weather.jpg" alt="img04">
-                                    <figcaption class="fig-caption">
-                                        <i class="fa fa-github"></i>
-                                        <h5 class="title">Weather</h5>
-                                        <span class="sub-title">Linux Service</span>
-                                        <a></a>
+                                    <img src="assets/images/portfolio/weather.jpg " alt="img04 ">
+                                    <figcaption class="fig-caption ">
+                                        <i class="fa fa-github "></i>
+                                        <h5 class="title ">Weather</h5>
+                                        <span class="sub-title ">Linux Service</span>
+                                        <a href="https://github.com/max-pok/weather_service"></a>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface ">
+                                <figure>
+                                    <img src="assets/images/portfolio/max-pok-light.jpg " alt="img04 ">
+                                    <figcaption class="fig-caption ">
+                                        <i class="fa fa-laptop"></i>
+                                        <h5 class="title ">max-pok</h5>
+                                        <span class="sub-title">Learn More About Recursion Here</span>
+                                        <a href="https://max-pok.web.app/"></a>
                                     </figcaption>
                                 </figure>
                             </div>
                             <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
                                 <figure>
-                                    <img src="assets/images/portfolio/max-pok.jpg" alt="img04">
-                                    <figcaption class="fig-caption">
-                                        <i class="fa fa-github"></i>
-                                        <h5 class="title">max-pok</h5>
-                                        <span class="sub-title"></span>
-                                        <a></a>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
-                                <figure>
-                                    <img src="assets/images/portfolio/android_studio.jpg" alt="img04">
+                                    <img src="assets/images/portfolio/android_studio.jpg" alt="img04 ">
                                     <figcaption class="fig-caption">
                                         <i class="fa fa-github"></i>
                                         <h5 class="title">SafeZone (Shelter)</h5>
                                         <span class="sub-title">Android Application</span>
-                                        <a></a>
+                                        <a href="https://github.com/max-pok/Shelter"></a>
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface ">
                                 <figure>
-                                    <img src="assets/images/portfolio/des.jpeg" alt="img04">
-                                    <figcaption class="fig-caption">
-                                        <i class="fa fa-github"></i>
+                                    <img src="assets/images/portfolio/des.jpeg " alt="img04 ">
+                                    <figcaption class="fig-caption ">
+                                        <i class="fa fa-github "></i>
                                         <h5 class="title">DES</h5>
-                                        <span class="sub-title">
+                                        <span class="sub-title ">
                                             Data Encryption Standard</span>
-                                        <a></a>
+                                        <a href="https://github.com/max-pok/DES"></a>
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding ">
                                 <figure>
-                                    <img src="assets/images/portfolio/angular.jpg" alt="img04">
-                                    <figcaption class="fig-caption">
-                                        <i class="fa fa-github"></i>
+                                    <img src="assets/images/portfolio/angular.jpg " alt="img04 ">
+                                    <figcaption class="fig-caption ">
+                                        <i class="fa fa-github "></i>
                                         <h5 class="title">Angular Course</h5>
-                                        <span class="sub-title">Assignments</span>
-                                        <a></a>
+                                        <span class="sub-title ">Assignments</span>
+                                        <a href="https://github.com/max-pok/Angular_Course"></a>
                                     </figcaption>
                                 </figure>
                             </div>
 
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding ">
                                 <figure>
-                                    <img src="assets/images/portfolio/java.jpg" alt="img04">
-                                    <figcaption class="fig-caption">
-                                        <i class="fa fa-github"></i>
+                                    <img src="assets/images/portfolio/java.jpg " alt="img04 ">
+                                    <figcaption class="fig-caption ">
+                                        <i class="fa fa-github "></i>
                                         <h5 class="title">Ski-Game</h5>
-                                        <span class="sub-title">Java Game</span>
-                                        <a></a>
+                                        <span class="sub-title ">Java Game</span>
+                                        <a href="https://github.com/max-pok/Ski-Game"></a>
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 ui mockup">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 ui mockup ">
                                 <figure>
-                                    <img src="assets/images/portfolio/compiler.jpg" alt="img04">
-                                    <figcaption class="fig-caption">
-                                        <i class="fa fa-github"></i>
+                                    <img src="assets/images/portfolio/compiler.jpg " alt="img04 ">
+                                    <figcaption class="fig-caption ">
+                                        <i class="fa fa-github "></i>
                                         <h5 class="title">Compiler</h5>
-                                        <span class="sub-title">Custom Compiler</span>
-                                        <a></a>
+                                        <span class="sub-title ">Custom Compiler</span>
+                                        <a href="https://github.com/max-pok/compiler"></a>
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding ">
                             </div>
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding ">
                                 <figure>
-                                    <img src="assets/images/portfolio/enigma.jpg" alt="img04">
+                                    <img src="assets/images/portfolio/enigma.jpg " alt="img04 ">
                                     <figcaption class="fig-caption">
-                                        <i class="fa fa-github"></i>
+                                        <i class="fa fa-github "></i>
                                         <h5 class="title">Enigma</h5>
                                         <span class="sub-title">Algorithm</span>
-                                        <a></a>
+                                        <a href="https://github.com/max-pok/Enigma"></a>
                                     </figcaption>
                                 </figure>
                             </div>
@@ -452,21 +450,21 @@
          CONTACT
       ===================
       -->
-    <footer class="mh-footer" #contactTarget>
-        <div class="map-image image-bg">
-            <div class="container">
-                <div class="row section-separator">
-                    <div class="col-sm-12 section-title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+    <footer class="mh-footer " #contactTarget>
+        <div class="map-image image-bg ">
+            <div class="container ">
+                <div class="row section-separator ">
+                    <div class="col-sm-12 section-title wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.2s ">
                         <h3>Contact Me</h3>
                     </div>
-                    <div class="col-sm-12 mh-footer-address">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-4">
-                                <div class="mh-address-footer-item dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                                    <div class="each-icon">
-                                        <i class="fa fa-telegram"></i>
+                    <div class="col-sm-12 mh-footer-address ">
+                        <div class="row ">
+                            <div class="col-sm-12 col-md-4 ">
+                                <div class="mh-address-footer-item dark-bg shadow-1 wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.3s ">
+                                    <div class="each-icon ">
+                                        <i class="fa fa-telegram "></i>
                                     </div>
-                                    <div class="each-info">
+                                    <div class="each-info ">
                                         <h4>Telegram</h4>
                                         <a>
                                           (+972)-523-546-002
@@ -474,65 +472,65 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-4">
-                                <div class="mh-address-footer-item dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                                    <div class="each-icon">
-                                        <i class="fa fa-envelope"></i>
+                            <div class="col-sm-12 col-md-4 ">
+                                <div class="mh-address-footer-item dark-bg shadow-1 wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.5s ">
+                                    <div class="each-icon ">
+                                        <i class="fa fa-envelope "></i>
                                     </div>
-                                    <div class="each-info">
+                                    <div class="each-info ">
                                         <h4>Email</h4>
-                                        <a href="maxim.p9@gmail.com">maxim.p9@gmail.com</a><br>
-                                        <a href="maximpo@ac.sce.ac.il">maximpo@ac.sce.ac.il</a>
+                                        <a href="maxim.p9@gmail.com ">maxim.p9@gmail.com</a><br>
+                                        <a href="maximpo@ac.sce.ac.il ">maximpo@ac.sce.ac.il</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-4">
-                                <div class="mh-address-footer-item dark-bg shadow-1 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.7s">
-                                    <div class="each-icon">
-                                        <i class="fa fa-whatsapp"></i>
+                            <div class="col-sm-12 col-md-4 ">
+                                <div class="mh-address-footer-item dark-bg shadow-1 wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.7s ">
+                                    <div class="each-icon ">
+                                        <i class="fa fa-whatsapp "></i>
                                     </div>
-                                    <div class="each-info">
+                                    <div class="each-info ">
                                         <h4>Whatsapp</h4>
-                                        <a href="callto:(880)-8976-987">(+972)-523-546-002</a><br>
+                                        <a href="callto:(880)-8976-987 ">(+972)-523-546-002</a><br>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 container fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                        <form id="contactForm" class="single-form quate-form wow fadeInUp" data-toggle="validator">
-                            <div id="msgSubmit" class="h3 text-center hidden"></div>
-                            <div class="row">
-                                <div class="col-md-6 col-sm-12">
-                                    <input name="name" class="contact-name form-control" type="text" placeholder="First Name" required>
+                    <div class="col-sm-12 col-md-6 container fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.3s ">
+                        <form id="contactForm " class="single-form quate-form wow fadeInUp " data-toggle="validator ">
+                            <div id="msgSubmit " class="h3 text-center hidden "></div>
+                            <div class="row ">
+                                <div class="col-md-6 col-sm-12 ">
+                                    <input name="name " class="contact-name form-control " type="text " placeholder="First Name " required>
                                 </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <input name="name" class="contact-email form-control" type="text" placeholder="Last Name" required>
+                                <div class="col-md-6 col-sm-12 ">
+                                    <input name="name " class="contact-email form-control " type="text " placeholder="Last Name " required>
                                 </div>
-                                <div class="col-sm-12">
-                                    <input name="name" class="contact-subject form-control" type="email" placeholder="Your Email" required>
+                                <div class="col-sm-12 ">
+                                    <input name="name " class="contact-subject form-control " type="email " placeholder="Your Email " required>
                                 </div>
-                                <div class="col-sm-12">
-                                    <textarea class="contact-message" rows="6" placeholder="Your Message" required></textarea>
+                                <div class="col-sm-12 ">
+                                    <textarea class="contact-message " rows="6 " placeholder="Your Message " required></textarea>
                                 </div>
                                 <!-- Subject Button -->
-                                <div class="btn-form col-sm-12">
-                                    <button type="submit" class="btn btn-fill btn-block">Send Message</button>
+                                <div class="btn-form col-sm-12 ">
+                                    <button type="submit " class="btn btn-fill btn-block ">Send Message</button>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <div class="col-sm-12 mh-copyright container fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="text-right text-xs-left">
+                    <div class="col-sm-12 mh-copyright container fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.3s ">
+                        <div class="row ">
+                            <div class="col-sm-6 ">
+                                <div class="text-right text-xs-left ">
                                     <p>Copyright @ 2020 Max Pokidaylo</p>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <ul class="social-icon">
-                                    <li><a href="#"><i class="fa fa-github"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <div class="col-sm-6 ">
+                                <ul class="social-icon ">
+                                    <li><a href="https://github.com/max-pok"><i class="fa fa-github "></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/max-pok/"><i class="fa fa-linkedin "></i></a></li>
                                 </ul>
                             </div>
                         </div>
