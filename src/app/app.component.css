@@ -1109,7 +1109,7 @@ h6 {
 .dark-version.black-bg {
     /* background-color: #100e17; */
     background-color: #010409;
-    /* background-color:#000a12; */
+    /* background-color: #000a12; */
 }
 
 .bg-dark {
@@ -1308,11 +1308,13 @@ h6 {
 }
 
 .dark-version .mh-home .hero-img img {
-    border: 20px solid rgba(0, 0, 0, 0.4);
+    /* border: 20px solid rgba(0, 0, 0, 0.4); */
+    border: 20px solid rgba(255, 255, 255, 0.096);
 }
 
 .dark-version .mh-home .img-border {
-    border: 20px solid rgba(0, 0, 0, 0.9);
+    /* border: 20px solid rgba(0, 0, 0, 0.8); */
+    border: 20px solid rgba(255, 255, 255, 0.041);
 }
 
 .dark-version .candidatos .parcial .progressBar {

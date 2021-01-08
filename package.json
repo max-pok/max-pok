@@ -30,6 +30,7 @@
     "angular-animate": "^1.8.2",
     "animate.css": "^4.1.1",
     "bootstrap": "^4.5.3",
+    "firebase": "^8.2.2",
     "jquery": "^3.5.1",
     "ng-circle-progress": "^1.6.0",
     "ngx-ui-switch": "^10.0.2",

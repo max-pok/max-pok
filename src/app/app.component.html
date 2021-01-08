@@ -75,12 +75,18 @@
                             <h4 class="wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.3s ">Software Engineering Student</h4>
 
                             <ul>
-                                <li class="wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.4s ">
+                                <li class="wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.4s">
                                     <i class="fa fa-envelope"></i>
                                     <a>maxim.p9@gmail.com</a>
                                 </li>
-                                <li class="wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.5s "><i class="fa fa-phone "></i><a href="callto: ">+972 523 546 002</a></li>
-                                <li class="wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.6s "><i class="fa fa-map-marker "></i><address>Israel</address></li>
+                                <li class="wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.5s ">
+                                    <i class="fa fa-phone"></i>
+                                    <a>+972 523 546 002</a>
+                                </li>
+                                <li class="wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.6s ">
+                                    <i class="fa fa-map-marker"></i>
+                                    <a>Israel</a>
+                                </li>
                             </ul>
 
                             <ul class="social-icon wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.7s ">
@@ -91,8 +97,8 @@
                     </div>
                     <div class="col-sm-6 ">
                         <div class="hero-img wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.2s ">
-                            <div class="img-border ">
-                                <img src="assets/images/hero.jpeg " alt=" " class="img-fluid ">
+                            <div class="img-border">
+                                <img src="assets/images/hero.jpeg " alt=" " class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -119,10 +125,13 @@
                         <h2 class="wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.1s ">About Me</h2>
                         <p class="wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.2s ">Hello, I’m Max, software engineering student (B.Sc., 4th year) with specialization in cyber security at SCE. Creative, determined and passionate for programming, application development and computer science.
                         </p>
-                        <p class="wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.2s ">Activaly searching for a student position or an entry-level position as a Software Engineer/Fullstack Developer/Backend Developer/Frontend Developer/Java Developer or any other relevent role that may suit my skills and knowlage.
+                        <p class="wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.2s ">Activaly searching for a student position or an entry-level position as a Software Engineer/Fullstack Developer/Backend Developer/Java Developer or any other relevent role that may suit my skills and knowledge.
                             <p class="wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.2s ">Avalible for job opportunities in central and southern Israel.
                             </p>
-                            <a href="# " class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.4s ">Downlaod Resume <i class="fa fa-download "></i></a>
+                            <a class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.4s" (click)="downloadResume()">
+                                Download Resume 
+                                <i class="fa fa-download "></i>
+                            </a>
                     </div>
                 </div>
             </div>
@@ -262,20 +271,20 @@
                         <h3>Professional Skills</h3>
                         <ul class="mh-professional-progress">
                             <li>
-                                <circle-progress [percent]="95" style="pointer-events: none;" [titleColor]="isDaytimeMode ? 'black' : 'white'" [unitsColor]="isDaytimeMode ? 'black' : 'white'">
+                                <circle-progress [percent]="95" style="pointer-events: none;" [titleColor]="isDaytimeMode ? '#000' : 'white'" [unitsColor]="isDaytimeMode ? '#000' : 'white'">
                                 </circle-progress>
                                 <div class="nome">Communication</div>
                             </li>
                             <li>
-                                <circle-progress [percent]="85 " style="pointer-events: none; "></circle-progress>
+                                <circle-progress [percent]="85 " style="pointer-events: none;" [titleColor]="isDaytimeMode ? '#000' : 'white'" [unitsColor]="isDaytimeMode ? '#000' : 'white'"></circle-progress>
                                 <div class="nome">Team Work</div>
                             </li>
                             <li>
-                                <circle-progress [percent]="60 " style="pointer-events: none; "></circle-progress>
+                                <circle-progress [percent]="60 " style="pointer-events: none;" [titleColor]="isDaytimeMode ? '#000' : 'white'" [unitsColor]="isDaytimeMode ? '#000' : 'white'"></circle-progress>
                                 <div class="pr-skill-name ">Project Management</div>
                             </li>
                             <li>
-                                <circle-progress [percent]="95 " style="pointer-events: none; "></circle-progress>
+                                <circle-progress [percent]="95 " style="pointer-events: none;" [titleColor]="isDaytimeMode ? '#000' : 'white'" [unitsColor]="isDaytimeMode ? '#000' : 'white'"></circle-progress>
                                 <div class="pr-skill-name ">Creativity</div>
                             </li>
                         </ul>
@@ -370,8 +379,8 @@
                                     <figcaption class="fig-caption ">
                                         <i class="fa fa-laptop"></i>
                                         <h5 class="title ">max-pok</h5>
-                                        <span class="sub-title">Learn More About Recursion Here</span>
-                                        <a href="https://max-pok.web.app/"></a>
+                                        <span class="sub-title">This Website</span>
+                                        <a href="https://github.com/max-pok/max-pok"></a>
                                     </figcaption>
                                 </figure>
                             </div>

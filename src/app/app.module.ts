@@ -10,7 +10,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgwWowModule } from 'ngx-wow';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { UiSwitchModule } from 'ngx-ui-switch';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
+const firebaseConfig = {
+  apiKey: "AIzaSyC0CMoBF7hr_NNqJVN3ARme_i4zGfgCSN4",
+  authDomain: "max-pok.firebaseapp.com",
+  projectId: "max-pok",
+  storageBucket: "max-pok.appspot.com",
+  messagingSenderId: "239956407017",
+  appId: "1:239956407017:web:4c47b4dd8443ca4806b678"
+};
 
 @NgModule({
   declarations: [
@@ -24,6 +34,8 @@ import { UiSwitchModule } from 'ngx-ui-switch';
     NgbModule,
     NgwWowModule,
     UiSwitchModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireStorageModule,
     NgCircleProgressModule.forRoot({
       "radius": 50,
       "space": -6,
