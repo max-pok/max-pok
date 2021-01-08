@@ -31,6 +31,7 @@
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "node_modules/font-awesome/css/font-awesome.css",
                             "node_modules/wowjs/css/libs/animate.css",
+                            "./node_modules/ngx-ui-switch/ui-switch.component.css",
                             "src/styles.css"
 
                         ],

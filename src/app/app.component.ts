@@ -1,6 +1,5 @@
 import { NgwWowService } from 'ngx-wow';
-import { Component, HostListener, OnInit } from '@angular/core';
-declare const test: any;
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +9,7 @@ declare const test: any;
 export class AppComponent implements OnInit {
   title = 'max-pok';
   isScrolled = false;
+  isDaytimeMode = true;
   isScrolledHome = false;
   isScrolledAbout = false;
   isScrolledSkills = false;
@@ -17,10 +17,10 @@ export class AppComponent implements OnInit {
   isScrolledContactMe = false;
 
   constructor(private wowService: NgwWowService) {
-    this.wowService.init();
   }
 
-  ngOnInit(): void {    
+  ngOnInit(): void { 
+    this.wowService.init();   
   }
 
   scroll(el: HTMLElement): void {

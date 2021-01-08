@@ -9,6 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgwWowModule } from 'ngx-wow';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { UiSwitchModule } from 'ngx-ui-switch';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     FontAwesomeModule,
     NgbModule,
     NgwWowModule,
+    UiSwitchModule,
     NgCircleProgressModule.forRoot({
       "radius": 50,
       "space": -6,

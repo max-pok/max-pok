@@ -1,4 +1,4 @@
-<body class="dark-vertion black-bg">
+<body class="black-bg" [ngClass]="!isDaytimeMode ? 'dark-version ' : 'white-version'">
     <!-- Start Loader -->
     <!-- <div class="section-loader">
         <div class="loader">
@@ -13,7 +13,7 @@
          NAVIGATION
       ===================
       -->
-    <div class="black-bg mh-header mh-fixed-nav nav-scroll mh-xs-mobile-nav" [ngClass]="{'bg-dark-inverse nav-shadow': isScrolled}">
+    <div class="black-bg mh-header mh-fixed-nav nav-scroll mh-xs-mobile-nav" [ngClass]="{'inverse nav-shadow': isScrolled}">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
@@ -39,8 +39,16 @@
                                 <a class="nav-link" (click)="scroll(portfolioTarget)">Portfolio</a>
                             </li>
                             <li class="nav-item" [ngClass]="{'active': isScrolledContactMe}">
-                                <a class=" nav-link " (click)="scroll(contactTarget)">Contact</a>
+                                <a class=" nav-link" (click)="scroll(contactTarget)">Contact</a>
                             </li>
+                            <li class="nav-item">
+                            </li>
+                            <ui-switch color="#0bceaf" [checked]="!isDaytimeMode" (valueChange)="isDaytimeMode = !isDaytimeMode">
+                                <img *ngIf="isDaytimeMode; else elseBlock" src="assets/images/daymode.png" style="width: 18px;height: 18px;" />
+                                <ng-template #elseBlock>
+                                    <img src="assets/images/nightmode.png" style="width: 22px;height: 22px;" />
+                                </ng-template>
+                            </ui-switch>
                         </ul>
                     </div>
                 </nav>
@@ -58,31 +66,31 @@
             <div class="container ">
                 <div class="row xs-column-reverse section-separator vertical-middle-content home-padding ">
                     <div class="col-sm-6 ">
-                        <div class="mh-header-info ">
-                            <div class="mh-promo wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.1s ">
+                        <div class="mh-header-info">
+                            <div class="mh-promo wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.1s ">
                                 <span>Hello I'm</span>
                             </div>
 
-                            <h2 class="wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.2s ">Max Pokidaylo</h2>
-                            <h4 class="wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.3s ">Software Engineering Student</h4>
+                            <h2 class="wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.2s ">Max Pokidaylo</h2>
+                            <h4 class="wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.3s ">Software Engineering Student</h4>
 
                             <ul>
-                                <li class="wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.4s ">
+                                <li class="wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.4s ">
                                     <i class="fa fa-envelope"></i>
                                     <a>maxim.p9@gmail.com</a>
                                 </li>
-                                <li class="wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.5s "><i class="fa fa-phone "></i><a href="callto: ">+972 523 546 002</a></li>
-                                <li class="wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.6s "><i class="fa fa-map-marker "></i><address>Israel</address></li>
+                                <li class="wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.5s "><i class="fa fa-phone "></i><a href="callto: ">+972 523 546 002</a></li>
+                                <li class="wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.6s "><i class="fa fa-map-marker "></i><address>Israel</address></li>
                             </ul>
 
-                            <ul class="social-icon wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.7s ">
+                            <ul class="social-icon wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.7s ">
                                 <li><a href="https://github.com/max-pok"><i class="fa fa-github "></i></a></li>
                                 <li><a href="https://www.linkedin.com/in/max-pok/"><i class="fa fa-linkedin "></i></a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-6 ">
-                        <div class="hero-img wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.6s ">
+                        <div class="hero-img wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.2s ">
                             <div class="img-border ">
                                 <img src="assets/images/hero.jpeg " alt=" " class="img-fluid ">
                             </div>
@@ -102,17 +110,17 @@
         <div class="container ">
             <div class="row section-separator ">
                 <div class="col-sm-12 col-md-6 ">
-                    <div class="mh-about-img shadow-2 wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.4s ">
-                        <img src="assets/images/ab-img.png " alt=" " class="img-fluid ">
+                    <div class="mh-about-img shadow-2 wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.4s ">
+                        <img src="assets/images/about-me3.png" alt=" " class="img-fluid ">
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 ">
                     <div class="mh-about-inner">
-                        <h2 class="wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.1s ">About Me</h2>
-                        <p class="wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.2s ">Hello, I’m Max, software engineering student (B.Sc., 4th year) with specialization in cyber security at SCE. Creative, determined and passionate for programming, application development and computer science.
+                        <h2 class="wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.1s ">About Me</h2>
+                        <p class="wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.2s ">Hello, I’m Max, software engineering student (B.Sc., 4th year) with specialization in cyber security at SCE. Creative, determined and passionate for programming, application development and computer science.
                         </p>
-                        <p class="wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.2s ">Activaly searching for a student position or an entry-level position as a Software Engineer/Fullstack Developer/Backend Developer/Frontend Developer/Java Developer or any other relevent role that may suit my skills and knowlage.
-                            <p class="wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.2s ">Avalible for job opportunities in central and southern Israel.
+                        <p class="wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.2s ">Activaly searching for a student position or an entry-level position as a Software Engineer/Fullstack Developer/Backend Developer/Frontend Developer/Java Developer or any other relevent role that may suit my skills and knowlage.
+                            <p class="wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.2s ">Avalible for job opportunities in central and southern Israel.
                             </p>
                             <a href="# " class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.4s ">Downlaod Resume <i class="fa fa-download "></i></a>
                     </div>
@@ -126,7 +134,7 @@
          SERVICE
       ===================
       -->
-    <section class="mh-service ">
+    <section class="mh-service">
         <div class="container ">
             <div class="row section-separato ">
                 <div class="col-sm-12 text-center section-title wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.2s ">
@@ -142,7 +150,7 @@
                     </div>
                 </div>
                 <div class="col-sm-4 ">
-                    <div class="mh-service-item shadow-1 dark-bg wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.5s ">
+                    <div class="mh-service-item shadow-1 dark-bg wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.5s ">
                         <i class="fa fa-code iron-color "></i>
                         <h3>Web Development</h3>
                         <p>
@@ -151,7 +159,7 @@
                     </div>
                 </div>
                 <div class="col-sm-4 ">
-                    <div class="mh-service-item shadow-1 dark-bg wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.7s ">
+                    <div class="mh-service-item shadow-1 dark-bg wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.7s ">
                         <i class="fa fa-object-ungroup sky-color "></i>
                         <h3>App Development</h3>
                         <p>
@@ -254,12 +262,13 @@
                         <h3>Professional Skills</h3>
                         <ul class="mh-professional-progress">
                             <li>
-                                <circle-progress [percent]="95" style="pointer-events: none; "></circle-progress>
-                                <div class="nome ">Communication</div>
+                                <circle-progress [percent]="95" style="pointer-events: none;" [titleColor]="isDaytimeMode ? 'black' : 'white'" [unitsColor]="isDaytimeMode ? 'black' : 'white'">
+                                </circle-progress>
+                                <div class="nome">Communication</div>
                             </li>
                             <li>
                                 <circle-progress [percent]="85 " style="pointer-events: none; "></circle-progress>
-                                <div class="pr-skill-name ">Team Work</div>
+                                <div class="nome">Team Work</div>
                             </li>
                             <li>
                                 <circle-progress [percent]="60 " style="pointer-events: none; "></circle-progress>
@@ -287,10 +296,10 @@
                 <div class="row section-separator ">
                     <div class="col-sm-12 col-md-6 ">
                         <div class="mh-education ">
-                            <h3 class="wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.2s ">Education</h3>
+                            <h3 class="wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.2s ">Education</h3>
                             <div class="mh-education-deatils ">
                                 <!-- Education Institutes-->
-                                <div class="mh-education-item dark-bg wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.3s ">
+                                <div class="mh-education-item dark-bg wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.3s ">
                                     <h4>B.Sc Software Engineering Student (4th year) From<a>Sami Shamoon College of Engineering</a></h4>
                                     <div class="mh-eduyear ">2017 - 2021</div>
                                     <div class="mh-eduyear "><span>Major: </span>Cyber Security</div>
@@ -305,7 +314,7 @@
                             <h3>Projects</h3>
                             <div class="mh-experience-deatils ">
                                 <!-- Project-->
-                                <div class="mh-work-item dark-bg wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.4s ">
+                                <div class="mh-work-item dark-bg wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.4s ">
                                     <h4><a>E-DKOM</a> Attack</h4>
                                     <p class="wow flash " data-wow-iteration="500 " data-wow-duration="5s " data-wow-delay="2s ">In Progress...</p>
                                     <ul class="work-responsibility ">
@@ -314,7 +323,7 @@
                                     </ul>
                                 </div>
                                 <!-- Project-->
-                                <div class="mh-work-item dark-bg wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.4s ">
+                                <div class="mh-work-item dark-bg wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.4s ">
                                     <h4><a href="https://github.com/max-pok/Shelter">SafeZone</a> Android Application </h4>
                                     <p>Safe zone (shelter) android application for Beer-Sheva residents.</p>
                                     <ul class="work-responsibility ">
@@ -338,13 +347,13 @@
     <section class="mh-portfolio " #portfolioTarget>
         <div class="container ">
             <div class="row section-separator ">
-                <div class="section-title col-sm-12 wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.1s ">
+                <div class="section-title col-sm-12 wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.1s ">
                     <h3>Recent Portfolio</h3>
                 </div>
                 <div class="part col-sm-12 ">
-                    <div class="mh-project-gallery col-sm-12 wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.5s ">
+                    <div class="mh-project-gallery col-sm-12  ">
                         <div class="portfolioContainer row ">
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface ">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.2s">
                                 <figure>
                                     <img src="assets/images/portfolio/weather.jpg " alt="img04 ">
                                     <figcaption class="fig-caption ">
@@ -355,7 +364,7 @@
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface ">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.3s">
                                 <figure>
                                     <img src="assets/images/portfolio/max-pok-light.jpg " alt="img04 ">
                                     <figcaption class="fig-caption ">
@@ -366,7 +375,7 @@
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.4s">
                                 <figure>
                                     <img src="assets/images/portfolio/android_studio.jpg" alt="img04 ">
                                     <figcaption class="fig-caption">
@@ -377,7 +386,7 @@
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface ">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 user-interface wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.5s">
                                 <figure>
                                     <img src="assets/images/portfolio/des.jpeg " alt="img04 ">
                                     <figcaption class="fig-caption ">
@@ -389,7 +398,7 @@
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding ">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.6s">
                                 <figure>
                                     <img src="assets/images/portfolio/angular.jpg " alt="img04 ">
                                     <figcaption class="fig-caption ">
@@ -401,7 +410,7 @@
                                 </figure>
                             </div>
 
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding ">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.7s">
                                 <figure>
                                     <img src="assets/images/portfolio/java.jpg " alt="img04 ">
                                     <figcaption class="fig-caption ">
@@ -412,7 +421,7 @@
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 ui mockup ">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 ui mockup wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.8s">
                                 <figure>
                                     <img src="assets/images/portfolio/compiler.jpg " alt="img04 ">
                                     <figcaption class="fig-caption ">
@@ -423,9 +432,9 @@
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding ">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.7s">
                             </div>
-                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding ">
+                            <div class="grid-item col-md-4 col-sm-6 col-xs-12 branding wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.9s">
                                 <figure>
                                     <img src="assets/images/portfolio/enigma.jpg " alt="img04 ">
                                     <figcaption class="fig-caption">
@@ -454,13 +463,13 @@
         <div class="map-image image-bg ">
             <div class="container ">
                 <div class="row section-separator ">
-                    <div class="col-sm-12 section-title wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.2s ">
+                    <div class="col-sm-12 section-title wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.2s ">
                         <h3>Contact Me</h3>
                     </div>
                     <div class="col-sm-12 mh-footer-address ">
                         <div class="row ">
                             <div class="col-sm-12 col-md-4 ">
-                                <div class="mh-address-footer-item dark-bg shadow-1 wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.3s ">
+                                <div class="mh-address-footer-item dark-bg shadow-1 wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.3s ">
                                     <div class="each-icon ">
                                         <i class="fa fa-telegram "></i>
                                     </div>
@@ -473,7 +482,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-4 ">
-                                <div class="mh-address-footer-item dark-bg shadow-1 wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.5s ">
+                                <div class="mh-address-footer-item dark-bg shadow-1 wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.5s ">
                                     <div class="each-icon ">
                                         <i class="fa fa-envelope "></i>
                                     </div>
@@ -485,7 +494,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-4 ">
-                                <div class="mh-address-footer-item dark-bg shadow-1 wow fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.7s ">
+                                <div class="mh-address-footer-item dark-bg shadow-1 wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.7s ">
                                     <div class="each-icon ">
                                         <i class="fa fa-whatsapp "></i>
                                     </div>
@@ -497,8 +506,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 container fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.3s ">
-                        <form id="contactForm " class="single-form quate-form wow fadeInUp " data-toggle="validator ">
+                    <div class="col-sm-12 col-md-6 container fadeIn " data-wow-duration="0.8s " data-wow-delay="0.3s ">
+                        <form id="contactForm " class="single-form quate-form wow fadeIn " data-toggle="validator ">
                             <div id="msgSubmit " class="h3 text-center hidden "></div>
                             <div class="row ">
                                 <div class="col-md-6 col-sm-12 ">
@@ -514,13 +523,13 @@
                                     <textarea class="contact-message " rows="6 " placeholder="Your Message " required></textarea>
                                 </div>
                                 <!-- Subject Button -->
-                                <div class="btn-form col-sm-12 ">
+                                <div class="btn-form col-sm-12 wow fadeInUp">
                                     <button type="submit " class="btn btn-fill btn-block ">Send Message</button>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <div class="col-sm-12 mh-copyright container fadeInUp " data-wow-duration="0.8s " data-wow-delay="0.3s ">
+                    <div class="col-sm-12 mh-copyright container wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.3s ">
                         <div class="row ">
                             <div class="col-sm-6 ">
                                 <div class="text-right text-xs-left ">

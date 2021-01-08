@@ -1,15 +1,110 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>MaxPok</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>MaxPok</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style type="text/css">
+        .section-loader {
+            position: fixed;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            z-index: 9999999;
+        }
+        
+        .section-loader .loader {
+            position: relative;
+        }
+        
+        .section-loader .loader div {
+            -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+            position: absolute;
+            border-width: 4px;
+            border-style: solid;
+            opacity: 1;
+            border-radius: 50%;
+            -webkit-animation: loader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+            animation: loader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+        }
+        
+        .section-loader .loader div:nth-child(1) {
+            border-color: #E91E63;
+        }
+        
+        .section-loader .loader div:nth-child(2) {
+            border-color: #0dbda1;
+            -webkit-animation-delay: -0.5s;
+            animation-delay: -0.5s;
+        }
+        
+        .section-loader .loader {
+            width: 200px !important;
+            height: 200px !important;
+            -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+            transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+        }
+        
+        @keyframes loader {
+            0% {
+                top: 94px;
+                left: 94px;
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+            100% {
+                top: 57px;
+                left: 57px;
+                width: 74px;
+                height: 74px;
+                opacity: 0;
+            }
+        }
+        
+        @-webkit-keyframes loader {
+            0% {
+                top: 94px;
+                left: 94px;
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+            100% {
+                top: 57px;
+                left: 57px;
+                width: 74px;
+                height: 74px;
+                opacity: 0;
+            }
+        }
+    </style>
+
 </head>
-<body class="mat-typography">
-  <app-root></app-root>
+
+<body>
+    <app-root>
+        <div class="section-loader">
+            <div class="loader">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </app-root>
 </body>
+
 </html>
