@@ -1,7 +1,6 @@
 import { NgwWowService } from 'ngx-wow';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
