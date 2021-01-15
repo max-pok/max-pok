@@ -1,13 +1,4 @@
 <body class="black-bg" [ngClass]="!isDaytimeMode ? 'dark-version ' : 'white-version'">
-    <!-- Start Loader -->
-    <!-- <div class="section-loader">
-        <div class="loader">
-            <div></div>
-            <div></div>
-        </div>
-    </div> -->
-    <!-- End Loader -->
-
     <!--
       ===================
          NAVIGATION
@@ -44,7 +35,7 @@
                             <li class="nav-item">
                             </li>
                             <ui-switch color="#0bceaf" [checked]="!isDaytimeMode" (valueChange)="isDaytimeMode = !isDaytimeMode">
-                                <img *ngIf="isDaytimeMode; else elseBlock" src="assets/images/daymode.png" style="width: 18px;height: 18px;" />
+                                <img *ngIf="isDaytimeMode; else elseBlock" src="assets/images/daymode.png" style="width: 20px;height: 20px;" />
                                 <ng-template #elseBlock>
                                     <img src="assets/images/nightmode.png" style="width: 22px;height: 22px;" />
                                 </ng-template>
@@ -128,7 +119,7 @@
                         <p class="wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.2s ">Activaly searching for a student position or an entry-level position as a Software Engineer/Fullstack Developer/Backend Developer/Java Developer or any other relevent role that may suit my skills and knowledge.
                             <p class="wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.2s ">Avalible for job opportunities in central and southern Israel.
                             </p>
-                            <a class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.4s" (click)="downloadResume()">
+                            <a class="btn btn-fill wow fadeInUp" data-wow-duration="0.8s " data-wow-delay="0.4s" (click)="downloadService.downloadResume()">
                                 Download Resume 
                                 <i class="fa fa-download "></i>
                             </a>
@@ -325,7 +316,7 @@
                                 <!-- Project-->
                                 <div class="mh-work-item dark-bg wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.4s ">
                                     <h4><a>E-DKOM</a> Attack</h4>
-                                    <p class="wow flash " data-wow-iteration="500 " data-wow-duration="5s " data-wow-delay="2s ">In Progress...</p>
+                                    <p class="wow flash " data-wow-iteration="500 " data-wow-duration="5s " data-wow-delay="2s ">In Development...</p>
                                     <ul class="work-responsibility ">
                                         <li><i class="fa fa-circle "></i>Final Project</li>
                                         <li><i class="fa fa-circle "></i>Linux Kernal Module</li>
@@ -495,8 +486,8 @@
                                     </div>
                                     <div class="each-info ">
                                         <h4>Email</h4>
-                                        <a href="maxim.p9@gmail.com">maxim.p9@gmail.com</a><br>
-                                        <a href="maximpo@ac.sce.ac.il ">maximpo@ac.sce.ac.il</a>
+                                        <a href="mailto:maxim.p9@gmail.com">maxim.p9@gmail.com</a><br>
+                                        <a href="mailto:maximpo@ac.sce.ac.il">maximpo@ac.sce.ac.il</a>
                                     </div>
                                 </div>
                             </div>
@@ -513,40 +504,42 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 container fadeIn " data-wow-duration="0.8s " data-wow-delay="0.3s ">
-                        <form id="contactForm " class="single-form quate-form wow fadeIn " data-toggle="validator ">
-                            <div id="msgSubmit " class="h3 text-center hidden "></div>
-                            <div class="row ">
-                                <div class="col-md-6 col-sm-12 ">
-                                    <input name="name " class="contact-name form-control " type="text " placeholder="First Name " required>
+                    <div class="col-sm-12 col-md-6 container fadeIn" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                        <form class="form-group wow fadeIn" [formGroup]="form">
+                            <!-- <div class="h3 alert alert-danger text-center wow animate__pulse animate__repeat-2" *ngIf="form.invalid && form.touched">
+                                Fill in the blanks
+                            </div> -->
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12">
+                                    <input class="form-control" type="text" placeholder="First Name" formControlName="name">
                                 </div>
-                                <div class="col-md-6 col-sm-12 ">
-                                    <input name="name " class="contact-email form-control " type="text " placeholder="Last Name " required>
+                                <div class="col-md-6 col-sm-12">
+                                    <input class="form-control " type="text" placeholder="Last Name" formControlName="last_name">
                                 </div>
-                                <div class="col-sm-12 ">
-                                    <input name="name " class="contact-subject form-control " type="email " placeholder="Your Email " required>
+                                <div class="col-sm-12">
+                                    <input class="form-control" type="email" placeholder="Your Email" formControlName="email">
                                 </div>
-                                <div class="col-sm-12 ">
-                                    <textarea class="contact-message " rows="6 " placeholder="Your Message " required></textarea>
+                                <div class="col-sm-12">
+                                    <textarea class="contact-message" rows="6" placeholder="Your Message" formControlName="message"></textarea>
                                 </div>
                                 <!-- Subject Button -->
-                                <div class="btn-form col-sm-12 wow fadeInUp ">
-                                    <button type="submit " class="btn btn-fill btn-block ">Send Message</button>
+                                <div class="btn-form col-sm-12 wow fadeInUp">
+                                    <button type="submit" class="btn btn-fill btn-block" [disabled]="form.invalid" (click)="emailService.sendMessage(form)">Send Message</button>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <div class="col-sm-12 mh-copyright container wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.3s ">
-                        <div class="row ">
-                            <div class="col-sm-6 ">
-                                <div class="text-right text-xs-left ">
+                    <div class="col-sm-12 mh-copyright container wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.3s">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="text-right text-xs-center">
                                     <p>Copyright @ 2020 Max Pokidaylo</p>
                                 </div>
                             </div>
-                            <div class="col-sm-6 ">
-                                <ul class="social-icon ">
-                                    <li><a href="https://github.com/max-pok "><i class="fa fa-github "></i></a></li>
-                                    <li><a href="https://www.linkedin.com/in/max-pok/ "><i class="fa fa-linkedin "></i></a></li>
+                            <div class="col-sm-6">
+                                <ul class="social-icon">
+                                    <li><a href="https://github.com/max-pok"><i class="fa fa-github"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/max-pok/"><i class="fa fa-linkedin"></i></a></li>
                                 </ul>
                             </div>
                         </div>

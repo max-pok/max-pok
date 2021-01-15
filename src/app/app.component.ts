@@ -1,6 +1,8 @@
 import { NgwWowService } from 'ngx-wow';
 import { Component, HostListener, OnInit } from '@angular/core';
-import { AngularFireStorage } from '@angular/fire/storage';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { EmailService } from './services/email.service';
+import { DownloadService } from './services/download.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,7 @@ import { AngularFireStorage } from '@angular/fire/storage';
 })
 export class AppComponent implements OnInit {
   title = 'max-pok';
+  form!: FormGroup;
   isScrolled = false;
   isDaytimeMode = true;
   isScrolledHome = false;
@@ -17,12 +20,24 @@ export class AppComponent implements OnInit {
   isScrolledPortfolio = false;
   isScrolledContactMe = false;
 
-  constructor(private wowService: NgwWowService, private afStorage: AngularFireStorage) {
+  constructor(private wowService: NgwWowService, 
+    public emailService: EmailService, public downloadService: DownloadService) {
   }
 
   ngOnInit(): void { 
     this.wowService.init();
     
+    this.initTheme();
+
+    this.form = new FormGroup({
+      name: new FormControl('', [Validators.required]),
+      last_name: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      message: new FormControl('', [Validators.required]),
+    });
+  }
+
+  initTheme() {
     const theme = window.matchMedia('(prefers-color-scheme: light)');
     theme.addEventListener('change', () => {
       this.isDaytimeMode = window.matchMedia('(prefers-color-scheme: light)').matches;
@@ -44,11 +59,4 @@ export class AppComponent implements OnInit {
     this.isScrolledContactMe = window.pageYOffset > 4000;
   }
 
-  downloadResume() {
-    const storageRef = this.afStorage.refFromURL('gs://max-pok.appspot.com/max-pok-resume.pdf');
-    storageRef.getDownloadURL().subscribe(url => {
-      window.open(url);
-    });
-    
-  }
 }

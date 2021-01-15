@@ -12,7 +12,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~11.0.3",
+    "@angular/animations": "^11.0.9",
     "@angular/cdk": "^11.0.3",
     "@angular/common": "~11.0.3",
     "@angular/compiler": "~11.0.3",
@@ -33,6 +33,7 @@
     "firebase": "^8.2.2",
     "jquery": "^3.5.1",
     "ng-circle-progress": "^1.6.0",
+    "ngx-toastr": "^13.2.0",
     "ngx-ui-switch": "^10.0.2",
     "ngx-wow": "^2.0.1",
     "rxjs": "^6.6.3",

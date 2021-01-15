@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgwWowModule } from 'ngx-wow';
@@ -12,6 +12,11 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { UiSwitchModule } from 'ngx-ui-switch';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EmailService } from './services/email.service';
+import { DownloadService } from './services/download.service';
+import { ToastrModule } from 'ngx-toastr';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC0CMoBF7hr_NNqJVN3ARme_i4zGfgCSN4",
@@ -29,6 +34,9 @@ const firebaseConfig = {
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
     NgbModule,
@@ -36,6 +44,7 @@ const firebaseConfig = {
     UiSwitchModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireStorageModule,
+    AngularFirestoreModule,
     NgCircleProgressModule.forRoot({
       "radius": 50,
       "space": -6,
@@ -55,9 +64,18 @@ const firebaseConfig = {
       "showBackground": true,
       "clockwise": true,
       "startFromZero": false,
+      }),
+      ToastrModule.forRoot({
+        timeOut: 2000,
+        positionClass: 'toast-bottom-center',
+        tapToDismiss: true,
+        newestOnTop: false
       })
   ],
-  providers: [],
+  providers: [
+    EmailService,
+    DownloadService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4038,3 +4038,7 @@ BLOG Pagination
     outline: none !important;
     border: none !important;
 }
+
+.alert {
+    background-color: brown;
+}
