@@ -1,8 +1,4 @@
-# MaxPok
-
-In Progress...
-
-## Development server
+# max-pok
 
 https://max-pok.web.app/
 
