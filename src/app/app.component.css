@@ -687,6 +687,11 @@ ul li {
     background-position: center center;
 }
 
+.map-image {
+    /* background-image: url(../images/map-color-overlay.png); */
+    background-image: url(../assets/images/globe-world-map3.png);
+}
+
 .mt-30 {
     margin-top: 30px;
 }
