@@ -9,7 +9,7 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://linkedin.com/in/max-pok" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="max-pok" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/in/max-pok/"><img alt="Linkedin" src="https://img.shields.io/badge/linkedin-0077B5?logo=linkedin&logoColor=white&style=for-the-badge" /></a>
 </p>
 
 ---
@@ -21,11 +21,9 @@
 ---
 
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=max-pok&show_icons=true&locale=en&layout=compact" alt="max-pok" /></p>
+<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=max-pok&show_icons=true&locale=en&layout=compact" alt="max-pok" /></p>
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=max-pok&show_icons=true&locale=en" alt="max-pok" /></p>
-
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=max-pok&theme=dark" alt="max-pok" /></p>
 
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=max-pok&label=Profile%20views&color=0e75b6&style=flat" alt="max-pok" /> </p>
 
