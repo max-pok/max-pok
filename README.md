@@ -21,9 +21,10 @@
 ---
 
 
-<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=max-pok&show_icons=true&locale=en&layout=compact" alt="max-pok" /></p>
-
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=max-pok&show_icons=true&locale=en" alt="max-pok" /></p>
+<p align="center"><br>
+    <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=max-pok&show_icons=true&locale=en&layout=compact" alt="max-pok" />
+    <img align="center" src="https://github-readme-stats.vercel.app/api?username=max-pok&show_icons=true&locale=en" alt="max-pok" />
+  </p>
 
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=max-pok&label=Profile%20views&color=0e75b6&style=flat" alt="max-pok" /> </p>
 
