@@ -7,7 +7,7 @@ import { DownloadService } from './services/download.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
   title = 'max-pok';
@@ -20,14 +20,17 @@ export class AppComponent implements OnInit {
   isScrolledPortfolio = false;
   isScrolledContactMe = false;
 
-  constructor(private wowService: NgwWowService, 
-    public emailService: EmailService, public downloadService: DownloadService) {
-  }
+  constructor(
+    private wowService: NgwWowService,
+    public emailService: EmailService,
+    public downloadService: DownloadService
+  ) {}
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
     this.wowService.init();
-    
+
     this.initTheme();
+    this.scrollEvent();
 
     this.form = new FormGroup({
       name: new FormControl('', [Validators.required]),
@@ -40,23 +43,29 @@ export class AppComponent implements OnInit {
   initTheme() {
     const theme = window.matchMedia('(prefers-color-scheme: light)');
     theme.addEventListener('change', () => {
-      this.isDaytimeMode = window.matchMedia('(prefers-color-scheme: light)').matches;
+      this.isDaytimeMode = window.matchMedia(
+        '(prefers-color-scheme: light)'
+      ).matches;
     });
-    this.isDaytimeMode = window.matchMedia('(prefers-color-scheme: light)').matches;
+    this.isDaytimeMode = window.matchMedia(
+      '(prefers-color-scheme: light)'
+    ).matches;
   }
 
   scroll(el: HTMLElement): void {
-    el.scrollIntoView({behavior: 'smooth'});
+    el.scrollIntoView({ behavior: 'smooth' });
   }
 
-  @HostListener("window:scroll", ['$event'])
-  scrollEvent($event: any) {
+  @HostListener('window:scroll', ['$event'])
+  scrollEvent() {
     this.isScrolled = window.pageYOffset >= 80;
-    this.isScrolledHome = window.pageYOffset >= -50 && window.pageYOffset <= 400;
-    this.isScrolledAbout = window.pageYOffset > 400 && window.pageYOffset <= 1200;
-    this.isScrolledSkills = window.pageYOffset > 1200 && window.pageYOffset <= 3000;
-    this.isScrolledPortfolio = window.pageYOffset > 3000 && window.pageYOffset <= 4000;
-    this.isScrolledContactMe = window.pageYOffset > 4000;
+    this.isScrolledHome = window.pageYOffset <= 400;
+    this.isScrolledAbout =
+      window.pageYOffset > 400 && window.pageYOffset <= 1200;
+    this.isScrolledSkills =
+      window.pageYOffset > 1200 && window.pageYOffset <= 2600;
+    this.isScrolledPortfolio =
+      window.pageYOffset > 2600 && window.pageYOffset <= 3600;
+    this.isScrolledContactMe = window.pageYOffset > 3600;
   }
-
 }
