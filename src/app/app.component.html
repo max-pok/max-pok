@@ -4,7 +4,7 @@
          NAVIGATION
       ===================
       -->
-    <div class="black-bg mh-header mh-fixed-nav nav-scroll" [ngClass]="{'inverse nav-shadow': isScrolled}">
+    <div class="black-bg mh-header mh-fixed-nav nav-scroll mh-xs-mobile-nav" [ngClass]="{'inverse nav-shadow': isScrolled}">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
@@ -12,10 +12,14 @@
                     <a class="navbar-brand" href="">
                         <h2>max-pok</h2>
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                              <span class="navbar-toggler-icon icon"></span>
-                          </button>
-                    <div class="collapse navbar-collapse">
+                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed">
+                            <span class="navbar-toggler-icon icon"></span>
+                    </button> -->
+
+                    <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" [ngbCollapse]="isNavbarCollapsed" id="navbarsDefault">
                         <ul class="navbar-nav mr-0 ml-auto">
                             <li class="nav-item" [ngClass]="{'active': isScrolledHome}">
                                 <a class="nav-link" (click)="scroll(homeTarget)">Home</a>
@@ -52,13 +56,13 @@
           HOME 
       ===================
       -->
-    <section class="mh-home home-ov-img " #homeTarget>
+    <section class="mh-home home-ov-img" #homeTarget>
         <div class="home-ovimg">
             <div class="container">
                 <div class="row xs-column-reverse section-separator vertical-middle-content home-padding">
-                    <div class="col-sm-6 ">
+                    <div class="col-sm-6">
                         <div class="mh-header-info">
-                            <div class="mh-promo wow fadeIn " data-wow-duration="0.8s " data-wow-delay="0.1s ">
+                            <div class="mh-promo wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.1s ">
                                 <span>Hello I'm</span>
                             </div>
 
@@ -86,7 +90,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-sm-6 ">
+                    <div class="col-sm-6">
                         <div class="hero-img wow fadeIn" data-wow-duration="0.8s" data-wow-delay="0.2s">
                             <div class="img-border">
                                 <img src="assets/images/hero.jpeg" alt="" class="img-fluid">
@@ -103,10 +107,10 @@
           ABOUT
       =================
       -->
-    <section class="mh-about " #aboutTarget>
-        <div class="container ">
-            <div class="row section-separator ">
-                <div class="col-sm-12 col-md-6 ">
+    <section class="mh-about" #aboutTarget>
+        <div class="container">
+            <div class="row section-separator">
+                <div class="col-sm-12 col-md-6">
                     <div class="mh-about-img shadow-2 wow fadeIn" data-wow-duration="0.8s " data-wow-delay="0.4s ">
                         <img src="assets/images/about-me3.png" alt=" " class="img-fluid ">
                     </div>

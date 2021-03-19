@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
   isScrolledSkills = false;
   isScrolledPortfolio = false;
   isScrolledContactMe = false;
+  isNavbarCollapsed = false;
 
   constructor(
     private wowService: NgwWowService,

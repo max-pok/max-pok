@@ -17,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmailService } from './services/email.service';
 import { DownloadService } from './services/download.service';
 import { ToastrModule } from 'ngx-toastr';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC0CMoBF7hr_NNqJVN3ARme_i4zGfgCSN4",
@@ -40,6 +41,7 @@ const firebaseConfig = {
     BrowserAnimationsModule,
     FontAwesomeModule,
     NgbModule,
+    NgbCollapseModule,
     NgwWowModule,
     UiSwitchModule,
     AngularFireModule.initializeApp(firebaseConfig),
