@@ -18,15 +18,8 @@ import { EmailService } from './services/email.service';
 import { DownloadService } from './services/download.service';
 import { ToastrModule } from 'ngx-toastr';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { firebaseConfig } from 'src/environments/environment';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyC0CMoBF7hr_NNqJVN3ARme_i4zGfgCSN4",
-  authDomain: "max-pok.firebaseapp.com",
-  projectId: "max-pok",
-  storageBucket: "max-pok.appspot.com",
-  messagingSenderId: "239956407017",
-  appId: "1:239956407017:web:4c47b4dd8443ca4806b678"
-};
 
 @NgModule({
   declarations: [

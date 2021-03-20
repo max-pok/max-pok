@@ -12,14 +12,10 @@
                     <a class="navbar-brand" href="">
                         <h2>max-pok</h2>
                     </a>
-                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed">
-                            <span class="navbar-toggler-icon icon"></span>
-                    </button> -->
-
-                    <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-controls="#exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" [ngbCollapse]="isNavbarCollapsed" id="navbarsDefault">
+                    <div class="collapse navbar-collapse" [ngbCollapse]="isNavbarCollapsed" id="exCollapsingNavbar2">
                         <ul class="navbar-nav mr-0 ml-auto">
                             <li class="nav-item" [ngClass]="{'active': isScrolledHome}">
                                 <a class="nav-link" (click)="scroll(homeTarget)">Home</a>
@@ -34,11 +30,11 @@
                                 <a class="nav-link" (click)="scroll(portfolioTarget)">Portfolio</a>
                             </li>
                             <li class="nav-item" [ngClass]="{'active': isScrolledContactMe}">
-                                <a class=" nav-link" (click)="scroll(contactTarget)">Contact</a>
+                                <a class="nav-link" (click)="scroll(contactTarget)">Contact</a>
                             </li>
                             <li class="nav-item">
                             </li>
-                            <ui-switch color="#0bceaf" [checked]="!isDaytimeMode" (valueChange)="isDaytimeMode = !isDaytimeMode">
+                            <ui-switch class='mx-xs-mobile-switch' color="#0bceaf" [checked]="!isDaytimeMode" (valueChange)="isDaytimeMode = !isDaytimeMode">
                                 <img *ngIf="isDaytimeMode; else elseBlock" src="assets/images/daymode.png" alt="" style="width: 20px;height: 20px;" />
                                 <ng-template #elseBlock>
                                     <img src="assets/images/nightmode.png" alt="" style="width: 22px;height: 22px;" />

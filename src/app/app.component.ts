@@ -1,8 +1,9 @@
 import { NgwWowService } from 'ngx-wow';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { EmailService } from './services/email.service';
 import { DownloadService } from './services/download.service';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,9 @@ export class AppComponent implements OnInit {
   isScrolledSkills = false;
   isScrolledPortfolio = false;
   isScrolledContactMe = false;
-  isNavbarCollapsed = false;
+  isNavbarCollapsed = true;
+
+  currentSection = 'section1';
 
   constructor(
     private wowService: NgwWowService,
@@ -55,18 +58,11 @@ export class AppComponent implements OnInit {
 
   scroll(el: HTMLElement): void {
     el.scrollIntoView({ behavior: 'smooth' });
+    this.currentSection = el.className;
   }
 
   @HostListener('window:scroll', ['$event'])
   scrollEvent() {
-    this.isScrolled = window.pageYOffset >= 80;
-    this.isScrolledHome = window.pageYOffset <= 400;
-    this.isScrolledAbout =
-      window.pageYOffset > 400 && window.pageYOffset <= 1200;
-    this.isScrolledSkills =
-      window.pageYOffset > 1200 && window.pageYOffset <= 2600;
-    this.isScrolledPortfolio =
-      window.pageYOffset > 2600 && window.pageYOffset <= 3600;
-    this.isScrolledContactMe = window.pageYOffset > 3600;
+    this.isScrolled = window.pageYOffset >= 70;
   }
 }
